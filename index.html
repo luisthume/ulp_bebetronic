@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .botao {
-                background-color: #4CAF50; /* Green */
-                color: white;
-                padding: 10px 28px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-            }
+<head>
+<style>
 
-            .botao:hover {
-                opacity: 0.6;
-                border-color: yellow;
-            }
-ALTERADO AHAHAHAHAHAHAH
-        </style>
-        <title>Page Title</title>
-    </head>
-    <body>
-        login:
-        <input id="login"></input>
-        <p></p>
-        password:
-        <input id="password" style="-webkit-text-security: disc;"></input>
-        <p></p>
-        <button class="botao" onclick="teste()">Submit</button>
-        <button onclick="unhide()" id="unhide_button" >Hide/Unhide</button>
+body {
+    background-image:url('gif_mine.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
 
-    </body>
+h1 {
+	text-align: center;
+	color: purple;
+}
 
-    <script>
 
-        function teste () {
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  width: center;
+  text-align: center;
 
-            login = document.getElementById("login").value;
-            password = document.getElementById("password").value;
+}
 
-            if (login === "oi" && password === "123") {
-                window.alert("Bem-vindo! Caralho.");
-            } else {
-                window.alert("Vai tomar no cuzinho");
-            }
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
 
-        }
-        
-        function unhide() {
-            password = document.getElementById("password");
-            if (password.style.webkitTextSecurity === "disc") {
-                password.style.webkitTextSecurity = "none";
-            } else {
-                password.style.webkitTextSecurity = "disc";
-            }
-        }
+.vertical-menu a.active {
+  background-color: purple;
+  color: white;
+}
+</style>
+</head>
+<body>
 
-    </script>
+<h1>JOGOS</h1>
+
+<div class="vertical-menu">
+  <a class="active">Home</a>
+  <a href="#">Jogo Bernardo</a>
+  <a href="#">Jogo Ricardo</a>
+  <a href="#">Jogo Ines</a>
+  <a href="#">Jogo Thume</a>
+  <a href="#">Jogo Arthur</a>
+</div>
+
+</body>
 </html>
