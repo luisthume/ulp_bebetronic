@@ -1,17 +1,82 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
+
 <head>
+    <link rel="stylesheet" href="bebetronic.css">
     <style>
         body {
-            background-image:url('main_background.jpg');
-            background-size:100%;
-            height:100%;
-            width:100%;
+            background-image: url('./assets/images/main_background.jpg');
+            background-size: 100%;
+            height: 100%;
+            width: 100%;
         }
-
-        body{height:100vh;height:calc(var(--vh, 1vh) * 100);width:100vw;background:#000;margin:0;overflow-x:hidden}
+        
+        body {
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            width: 100vw;
+            margin: 0;
+            overflow-x: hidden
+        }
+        
+        label.game-title,
+        p.game-title {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            min-height: 30px;
+            margin: 30px auto;
+            font-weight: bolder;
+            text-align: center;
+            font-family: beon;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b800e6, 0 0 20px #b800e6, 0 0 25px #b800e6, 0 0 30px #b800e6, 0 0 35px #b800e6;
+            line-height: 1.3
+        }
+        
+        main.game-container {
+            display: grid;
+            height: 100%;
+            height: calc(100vh - 20px);
+            height: calc(var(--vh, 1vh) * 100)
+        }
+        
+        .game-button-container button {
+            font-size: 25px;
+            padding: 15px;
+            margin: 2px auto
+        }
     </style>
 </head>
+
 <body>
+    <main class="game-container">
+        <label class="game-title">Never have I ever 😈</label>
+        <section class="card" style="padding-right: 10px;">
+            <div class="message-card">
+                <label id="message-card-text"></label></div>
+        </section>
+        <section class="game-button-container"><button class="glowButton accelerated red" style="margin: 10px;" onclick=respostaNao()> Never 😪 </button><button class="glowButton accelerated" style="margin: 10px;" onclick=respostaSim()> Of course 🙈 </button>
+        </section>
+    </main>
 </body>
+
+<script>
+    function getPergunta() {
+        let perguntas = ["Você come cocô?", "Como vou dizer não as drogas se elas não me perguntaram nada?", "Tens redes sociais?"];
+        randomNum = perguntas.length;
+        return perguntas[Math.floor(Math.random() * randomNum)]
+    }
+
+    function respostaSim() {
+        window.alert("Sim")
+    }
+
+    function respostaNao() {
+        window.alert("Não")
+    }
+
+    document.getElementById("message-card-text").innerHTML = getPergunta();
+</script>
+
 </html>
